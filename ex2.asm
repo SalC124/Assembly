@@ -14,4 +14,4 @@ _start:
 	int 0x80      ; perform system call
 	mov eax, 1    ; sys_exit system call
 	mov ebx, 0    ; exit status is 0
-	int 0x80
+	int 0x80      ; interupt for syscalls (128)
