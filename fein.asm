@@ -6,7 +6,7 @@ section .data
 
 section .text
 _start:
-	mov edi, 4		; number of feins
+	mov edi, 1000000; number of feins
 
 loop:
 	mov eax, 4    ; sys_write system call
