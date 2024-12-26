@@ -1,17 +1,25 @@
 global _start
 
-
 section .data
 	msg db "FE!N!", 0x0a
 	len equ $ - msg
 
 section .text
 _start:
+	mov edi, 4		; number of feins
+
+loop:
 	mov eax, 4    ; sys_write system call
 	mov ebx, 1    ; stdout file descriptor
 	mov ecx, msg  ; bytes to write
 	mov edx, len  ; number of bytes to write
 	int 0x80      ; perform system call
+
+; loop logic
+	dec edi				; edi--
+	cmp edi, 0		; edi > 0
+	jg loop				; if true, jump to "loop"
+
 	mov eax, 1    ; sys_exit system call
 	mov ebx, 0    ; exit status is 0
-	int 0x80      ; interupt for syscalls (128)
+	int 0x80      ; interrupt for syscalls (128)
