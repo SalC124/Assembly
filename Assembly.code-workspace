@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tabCompletion": "off",
+		"editor.defaultFormatter": "maziac.asm-code-lens",
+		"editor.wordWrap": "off",
+		"editor.wordWrapColumn": 40,
+		"editor.wrappingIndent": "deepIndent",
+	}
+}
