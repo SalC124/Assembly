@@ -16,9 +16,9 @@ loop:
 	int 0x80      ; perform system call
 
 ; loop logic
-	dec edi				; edi--
-	cmp edi, 0		; edi > 0
-	jg loop				; if true, jump to "loop"
+	dec edi       ; edi--
+	cmp edi, 0    ; edi > 0
+	jg loop       ; if true, jump to "loop"
 
 	mov eax, 1    ; sys_exit system call
 	mov ebx, 0    ; exit status is 0
